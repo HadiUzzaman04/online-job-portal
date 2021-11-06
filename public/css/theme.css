@@ -1,11 +1,10 @@
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
-Project:  CoolAdmin
+Project:  Admin
 Version:	1.0
-Last change:	08/10/2018 [Add Define a table of contents Link]
-Assigned to:	Hau Nguyen
-Primary use:	Open Source
+Last change:	08/10/2021 [Add Define a table of contents Link]
+
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [LAYOUT]
@@ -3246,7 +3245,8 @@ section {
 }
 
 .overview-chart {
-    height: 115px;
+    height: 100px;
+    
     position: relative;
 }
 
