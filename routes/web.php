@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AdminController;
+use App\Http\controllers\TableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,8 @@ use App\Http\controllers\AdminController;
 
 // Route::get('/', [HomeConroller::class, 'index']);
 Route::get('/admin',[AdminController::class,'testtow']);
+Route::get('/table',[TableController::class,'companies'])->name('companies');
+Route::get('/applicant',[TableController::class,'applicant'])->name('applicant');
+Route::get('/catagories',[TableController::class,'catagories'])->name('catagories');
+Route::get('/events',[TableController::class,'events'])->name('events');
 
