@@ -40,7 +40,7 @@
 <!-- content -->
 @yield('contents')
 
-@include('admin.partials.footer')
+@include('admin.partials.sidebar')
 
 </body>
 
