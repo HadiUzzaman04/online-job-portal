@@ -8,7 +8,7 @@
                     <!-- button -->
                     <div class="card-body">
                     
-                        <a href="{{route('add_company')}}" name="" class="btn btn-primary">Add Company</a>
+                        <a href="{{route('add_company')}}" name="" class="btn-btn">Add Company</a>
 
                     </div>
                     
