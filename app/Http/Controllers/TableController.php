@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class TableController extends Controller
 {
-    public function companies (){
-        return view ('admin.table.companies');
-    }
-    public function addComp(){
-        return view ('admin.button.add_company');
-    }
+    // public function companies (){
+    //     return view ('admin.table.companies');
+    // }
+    // public function addComp(){
+    //     return view ('admin.button.add_company');
+    // }
 
 
 

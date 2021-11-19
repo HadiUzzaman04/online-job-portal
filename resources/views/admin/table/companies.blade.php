@@ -8,7 +8,7 @@
                     <!-- button -->
                     <div class="card-body">
                     
-                        <a href="{{route('add_company')}}" name="" class="btn-btn">Add Company</a>
+                        <a href="{{route('create')}}" name="" class="btn-btn">Add Company</a>
 
                     </div>
                     
@@ -25,13 +25,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>2018-09-29 05:57</td>
-                                <td>Mobile</td>
-                                <td>iPhone X 64Gb Grey</td>
-                                <td>Processed</td>
-                                <td>$999.00</td>
-                            </tr>
+                            @foreach($companies as $company)
+                                <tr>
+                                    <td>{{$company->ompany_id}}</td>
+                                    <td>{{$company->company_name}}</td>
+                                    <td>{{$company->company_type}}</td>
+                                    <td>{{$company->email}}</td>
+                                    <td>{{$company->password}}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <!-- END DATA TABLE-->

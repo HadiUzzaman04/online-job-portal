@@ -9,4 +9,5 @@ class AdminController extends Controller
     public function testtow(){
         return view('admin.content');
     }
+    
 }
