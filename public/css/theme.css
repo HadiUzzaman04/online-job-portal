@@ -331,7 +331,7 @@ section {
 }
 
 .page-content--bge5 {
-    background: #e5e5e5;
+    background: white;
     height: 100vh;
 }
 
@@ -4223,7 +4223,7 @@ section {
 }
 
 /* form */
-@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+/* @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
 .myform {
   position: absolute;
   left: 0;
@@ -4232,7 +4232,7 @@ section {
   height: 100%;
   font-family: "Roboto", sans-serif;
   background-color:white;
-}
+} */
 h1{
     padding-left: 15%;
     font-size: medium;
@@ -4304,7 +4304,7 @@ h1{
   top: -30px;
   width: 305px;
   height: 380px;
-  background-color: blue;
+  background-color: white;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
 }

@@ -1,31 +1,44 @@
 @extends('admin.index')
 
-  @section('contents')
+@section('contents')
 
 
-    <div class="myform">
-      <div class="container">
-        <div class="container-form">
-          <div class="form-item">
-          <form action="{{route('store')}}"method="post"enctype="multipart/form-data">
-         @csrf
-              <h1>company_id</h1>
-              <input name="company_id" placeholder="company_id" type="text" />
-              <h1>company_name</h1>
-              <input name="company_name" placeholder="company_name" type="text" />
-              <h1>company_type</h1>
-              <input name="company_type" placeholder="company_type" type="text" />
-              <h1>email</h1>
-              <input name="email" placeholder="email" type="text" />
-              <h1>password</h1>
-              <input name="password" placeholder="password" type="text" />
-              <button class="btn btn-primary">submit</button>
-          </form>
+  <div class="page-content--bge5">
+    <div class="container">
+      <div class="login-wrap">
+        <div class="login-content">
+          <div class="login-form">
+            <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
+              @csrf
+              <div class="form-group">
+                <label>company_id</label>
+                <input class="au-input au-input--full" type="company_id" name="company_id" placeholder="company_id">
+              </div>
+              <div class="form-group">
+                <label>company_name</label>
+                <input class="au-input au-input--full" type="company_name" name="company_name" placeholder="company_name">
+              </div>
+              <div class="form-group">
+                <label>company_type</label>
+                <input class="au-input au-input--full" type="company_type" name="company_type" placeholder="company_type">
+              </div>
+              <div class="form-group">
+                <label>email</label>
+                <input class="au-input au-input--full" type="email" name="email" placeholder="email">
+              </div>
+              <div class="form-group">
+                <label>password</label>
+                <input class="au-input au-input--full" type="password" name="password" placeholder="password">
+              </div>
+              <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>
+            </form>
           </div>
-
         </div>
       </div>
     </div>
+ </div>
+
+
 
 
 @endsection
