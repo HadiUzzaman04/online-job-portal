@@ -24,7 +24,7 @@
                                 <i class="fas fa-table"></i>Applicant </a>
                         </li>
                         <li>
-                            <a href="{{route('catagories')}}">
+                            <a href="{{route('indexCategory')}}">
                                 <i class="fas fa-table"></i>Catagories </a>
                         </li>
                         <li>
