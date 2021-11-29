@@ -27,3 +27,13 @@ Route::post('/table/store',[ManageCompanyController::class,'store'])->name('stor
 Route::get('/tablecategory',[CategoryController::class,'indexCategory'])->name('indexCategory');
 Route::get('/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
 Route::post('/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
+
+
+
+
+
+
+//Website
+Route::get('/',function(){
+    return view('website.master');
+});
