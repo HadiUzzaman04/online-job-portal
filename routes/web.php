@@ -5,6 +5,7 @@ use App\Http\controllers\AdminController;
 use App\Http\Controllers\ManageCompanyController;
 use App\Http\controllers\TableController;
 use App\Http\controllers\CategoryController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\Website\JobController;
 use App\Http\Controllers\Website\AboutusController;
 use App\Http\Controllers\Website\ContactusController;
@@ -33,7 +34,8 @@ Route::get('/admin',[AdminController::class,'testtow']);
 
 Route::get('/applicant',[TableController::class,'applicant'])->name('applicant');
 Route::get('/catagories',[TableController::class,'catagories'])->name('catagories');
-Route::get('/events',[TableController::class,'events'])->name('events');
+Route::get('/jobs',[TableController::class,'jobs'])->name('jobs');
+Route::get('/testimonials',[TableController::class,'testimonials'])->name('testimonials');
 
 
 //NEW
@@ -47,5 +49,7 @@ Route::get('/tablecategory',[CategoryController::class,'indexCategory'])->name('
 Route::get('/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
 Route::post('/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
 
-
+//Event
+Route::get('/event',[EventController::class,'index'])->name('index');
+Route::get('/event/create',[EventController::class,'create'])->name('event.index');
 

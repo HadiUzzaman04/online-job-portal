@@ -28,7 +28,12 @@ class TableController extends Controller
         return view ('admin.layout.catagories');
     }
 
-    public function events (){
-        return view ('admin.layout.events');
+
+    public function jobs (){
+        return view ('admin.layout.jobs');
+    }
+    
+    public function testimonials (){
+        return view ('admin.layout.testimonials');
     }
 }

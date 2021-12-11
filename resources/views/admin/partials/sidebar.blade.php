@@ -24,12 +24,20 @@
                                 <i class="fas fa-table"></i>Applicant </a>
                         </li>
                         <li>
+                            <a href="{{route('jobs')}}">
+                                <i class="fas fa-table"></i>Jobs </a>
+                        </li>
+                        <li>
                             <a href="{{route('indexCategory')}}">
                                 <i class="fas fa-table"></i>Catagories </a>
                         </li>
                         <li>
-                            <a href="{{route('events')}}">
+                            <a href="{{route('index')}}">
                                 <i class="fas fa-table"></i>Events </a>
+                        </li>
+                        <li>
+                            <a href="{{route('testimonials')}}">
+                                <i class="fas fa-table"></i>Testimonials </a>
                         </li>
                     </ul>
                 </nav>

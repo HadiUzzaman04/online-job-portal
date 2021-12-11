@@ -6,11 +6,6 @@
             <div class="container-fluid">
                 <div class="row m-t-30">
                     <!-- button -->
-                    <div class="card-body">
-                    
-                    <a href="{{route('event.index')}}" class="btn-btn">Add Events</a>
-
-                </div>
                     
                     <div class="col-md-12">
                     <!-- DATA TABLE-->
@@ -18,16 +13,12 @@
                         <thead>
                             <tr>
                                 
-                                <th>Title</th>
+                                <th>Type</th>
+                                <th>Category</th>
+                                <th>Years Of Experience</th>
                                 <th>Discription</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Title</td>
-                                <td>Description</td>
-                            </tr>
-                        </tbody>
                     </table>
                     <!-- END DATA TABLE-->
                 </div>
