@@ -27,12 +27,11 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
                     
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="team.html">Applicant</a>
-                      <a class="dropdown-item" href="testimonials.html">Company</a>
-                      <a class="dropdown-item" href="terms.html">Admin</a>
+                      <a class="dropdown-item" href="{{route('applicant.login')}}">Applicant</a>
+                      <a class="dropdown-item" href="{{route('company.login')}}">Company</a>
+                      <a class="dropdown-item" href="{{route('admin.login')}}">Admin</a>
                     </div>
                 </li>
-
             </ul>
           </div>
         </div>

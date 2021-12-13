@@ -9,7 +9,11 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\Website\JobController;
 use App\Http\Controllers\Website\AboutusController;
 use App\Http\Controllers\Website\ContactusController;
+use App\Http\Controllers\website\login\ApplicantLoginController;
 use App\Http\Controllers\Website\TestimonialsController;
+use App\Http\Controllers\website\login\CompanyLoginController;
+use App\Http\Controllers\website\login\AdminLoginController;
+
 
 
 //Website
@@ -22,6 +26,11 @@ Route::get('/website/aboutus',[AboutusController::class,'aboutus'])->name('about
 Route::get('/website/contactus',[ContactusController::class,'contactus'])->name('contactus.index');
 Route::get('/website/testimonials',[TestimonialsController::class,'testimonials'])->name('testimonials.index');
 
+//login
+
+Route::get('/applicant/login',[ApplicantLoginController::class,'index'])->name('applicant.login');
+Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
+Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
 
 
 
@@ -45,11 +54,15 @@ Route::get('/table/create',[ManageCompanyController::class,'create'])->name('cre
 Route::post('/table/store',[ManageCompanyController::class,'store'])->name('store');
 
 //Category
+
 Route::get('/tablecategory',[CategoryController::class,'indexCategory'])->name('indexCategory');
 Route::get('/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
 Route::post('/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
 
 //Event
+
 Route::get('/event',[EventController::class,'index'])->name('index');
 Route::get('/event/create',[EventController::class,'create'])->name('event.index');
+
+
 
