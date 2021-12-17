@@ -14,7 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('website/bootstrap.min.css')}}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{url('css/login.css')}}">
+    
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{url('website/fontawesome.css')}}">

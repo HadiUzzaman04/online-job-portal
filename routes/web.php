@@ -13,13 +13,14 @@ use App\Http\Controllers\website\login\ApplicantLoginController;
 use App\Http\Controllers\Website\TestimonialsController;
 use App\Http\Controllers\website\login\CompanyLoginController;
 use App\Http\Controllers\website\login\AdminLoginController;
+use App\Http\Controllers\website\login\RegestationController;
 
 
 
 //Website
 Route::get('/',function(){
     return view('website.layouts.content');
-});
+})->name('Home');
 
 Route::get('/website/job',[JobController::class,'job'])->name('jobs.index');
 Route::get('/website/aboutus',[AboutusController::class,'aboutus'])->name('aboutus.index');
@@ -32,6 +33,9 @@ Route::get('/applicant/login',[ApplicantLoginController::class,'index'])->name('
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
 Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
 
+
+//Regestation
+Route::get('/applicant/regestation',[RegestationController::class,'index'])->name('applicant.regestation');
 
 
 
