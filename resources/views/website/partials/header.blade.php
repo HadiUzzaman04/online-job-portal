@@ -27,7 +27,12 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
                     
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="{{route('applicant.login')}}">Applicant</a>
+                      @if(auth()->user())
+                      <a class="dropdown-item" href="{{route('applicant.logout')}}">Applicant Logout</a>
+                      @else
+                      <a class="dropdown-item" href="{{route('applicant.login')}}">Applicant Login</a>
+                      @endif
+
                       <a class="dropdown-item" href="{{route('company.login')}}">Company</a>
                       <a class="dropdown-item" href="{{route('admin.login')}}">Admin</a>
                     </div>

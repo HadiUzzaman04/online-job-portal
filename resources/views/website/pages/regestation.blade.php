@@ -12,33 +12,34 @@
 				
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="{{route('applicant.registation.done')}}" method="post">
+					@csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input type="text" name="name" class="form-control" placeholder="username">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="email" class="form-control" placeholder="email">
+						<input type="email" name="email"class="form-control" placeholder="email">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="phone" class="form-control" placeholder="phone">
+						<input type="phone" name="phone" class="form-control" placeholder="phone">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input type="password" name="password" class="form-control" placeholder="password">
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Regester" class="btn float-right regester_btn">

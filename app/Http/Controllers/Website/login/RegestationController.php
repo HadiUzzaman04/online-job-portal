@@ -14,7 +14,7 @@ class RegestationController extends Controller
      */
     public function index()
     {
-        return view('website.pages.Regestation');
+        
     }
 
     /**
@@ -35,7 +35,7 @@ class RegestationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

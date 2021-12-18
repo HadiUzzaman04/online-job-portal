@@ -4,6 +4,9 @@ namespace App\Http\Controllers\website\login;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class ApplicantLoginController extends Controller
 {
@@ -25,7 +28,7 @@ class ApplicantLoginController extends Controller
      */
     public function create()
     {
-        //
+        return view('website.pages.Regestation');
     }
 
     /**
@@ -36,51 +39,34 @@ class ApplicantLoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'name'=>$request->input('name'),
+            'email'=>$request->input('email'),
+            'phone'=>$request->input('phone'),
+            'password'=>bcrypt($request->input('password')),
+            
+        ]);
+        //dd($request->all());
+        return redirect('/');
+        
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+
+    public function dologin(Request $request){
+
+        // dd($request);
+        $userPost = $request->except('_token');
+                // dd($userPost);
+        if(Auth::attempt($userPost)){
+            return redirect('/');
+        } else{
+            return redirect('/');
+        }
+
+    }
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -30,12 +30,17 @@ Route::get('/website/testimonials',[TestimonialsController::class,'testimonials'
 //login
 
 Route::get('/applicant/login',[ApplicantLoginController::class,'index'])->name('applicant.login');
+Route::post('/applicant/do/login',[ApplicantLoginController::class,'dologin'])->name('applicant.do.login');
+
+Route::get('/applicant/do/regestation',[ApplicantLoginController::class,'create'])->name('applicant.do.regestation');
+Route::post('/applicant/regestation/done',[ApplicantLoginController::class,'store'])->name('applicant.registation.done');
+Route::get('/applicant/logout',[ApplicantLoginController::class,'logout'])->name('applicant.logout');
+
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
 Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
 
 
-//Regestation
-Route::get('/applicant/regestation',[RegestationController::class,'index'])->name('applicant.regestation');
+
 
 
 
