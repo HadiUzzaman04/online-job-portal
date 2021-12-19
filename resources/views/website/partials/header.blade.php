@@ -28,13 +28,14 @@
                     
                     <div class="dropdown-menu">
                       @if(auth()->user())
+                      <!-- <a href="">{{auth()->user()->name}}</a> -->
                       <a class="dropdown-item" href="{{route('applicant.logout')}}">Applicant Logout</a>
                       @else
                       <a class="dropdown-item" href="{{route('applicant.login')}}">Applicant Login</a>
                       @endif
 
                       <a class="dropdown-item" href="{{route('company.login')}}">Company</a>
-                      <a class="dropdown-item" href="{{route('admin.login')}}">Admin</a>
+
                     </div>
                 </li>
             </ul>

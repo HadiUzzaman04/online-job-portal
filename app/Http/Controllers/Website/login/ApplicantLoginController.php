@@ -57,6 +57,7 @@ class ApplicantLoginController extends Controller
         // dd($request);
         $userPost = $request->except('_token');
                 // dd($userPost);
+                // dd(Auth::attempt($userPost));
         if(Auth::attempt($userPost)){
             return redirect('/');
         } else{

@@ -40,7 +40,8 @@ Route::post('/applicant/regestation/done',[ApplicantLoginController::class,'stor
 Route::get('/applicant/logout',[ApplicantLoginController::class,'logout'])->name('applicant.logout');
 
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
-Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
+
+//Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
 
 
 

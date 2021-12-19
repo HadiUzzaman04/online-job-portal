@@ -18,7 +18,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="text" name="name" class="form-control" placeholder="username">
+						<input type="text" name="email" class="form-control" placeholder="email">
 						
 					</div>
 					<div class="input-group form-group">

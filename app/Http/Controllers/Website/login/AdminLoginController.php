@@ -12,11 +12,7 @@ class AdminLoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view ('website.pages.adminlogin');
-    }
-
+   
     /**
      * Show the form for creating a new resource.
      *
