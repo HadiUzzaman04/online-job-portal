@@ -19,17 +19,18 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                
+                                <th>ID</th>
                                 <th>Category Name</th>
-                                <th>Category Type</th>
+                                <th>Category Details</th>
                                 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($categories as $Category)
+                            @foreach($categories as $key=>$Category)
                                 <tr> 
+                                    <td>{{$key+1}}</td>
                                     <td>{{$Category->category_name}}</td>
-                                    <td>{{$Category->category_type}}</td>
+                                    <td>{{$Category->category_details}}</td>
                                 </tr>
                             @endforeach
                         </tbody>

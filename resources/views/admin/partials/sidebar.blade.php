@@ -16,7 +16,7 @@
                         </li>
                        
                         <li>
-                            <a href="{{route('index')}}">
+                            <a href="{{route('index.company')}}">
                                 <i class="fas fa-table"></i>Companies </a>
                         </li>
                         <li>

@@ -7,7 +7,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="{{route('Home')}}">Home
                       <span class="sr-only">(current)</span>
                     </a>
@@ -28,7 +28,6 @@
                     
                     <div class="dropdown-menu">
                       @if(auth()->user())
-                      <!-- <a href="">{{auth()->user()->name}}</a> -->
                       <a class="dropdown-item" href="{{route('applicant.logout')}}">Applicant Logout</a>
                       @else
                       <a class="dropdown-item" href="{{route('applicant.login')}}">Applicant Login</a>
@@ -42,4 +41,4 @@
           </div>
         </div>
       </nav>
-    </header>
+</header>

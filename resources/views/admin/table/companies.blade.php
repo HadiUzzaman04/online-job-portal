@@ -17,7 +17,7 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                <th>Company ID</th>
+                                <th>ID</th>
                                 <th>Company Name</th>
                                 <th>Company Type</th>
                                 <th>Company Email</th>
@@ -25,9 +25,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($companies as $company)
+                            @foreach($companies as $key=>$company)
                                 <tr>
-                                    <td>{{$company->ompany_id}}</td>
+                                    <td>{{$key+1}}</td>
                                     <td>{{$company->company_name}}</td>
                                     <td>{{$company->company_type}}</td>
                                     <td>{{$company->email}}</td>

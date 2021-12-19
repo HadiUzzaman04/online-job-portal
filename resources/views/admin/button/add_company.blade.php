@@ -8,12 +8,9 @@
       <div class="login-wrap">
         <div class="login-content">
           <div class="login-form">
+          <h2 class="text-center">Add Company</h2>
             <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
               @csrf
-              <div class="form-group">
-                <label>company_id</label>
-                <input class="au-input au-input--full" type="company_id" name="company_id" placeholder="company_id">
-              </div>
               <div class="form-group">
                 <label>company_name</label>
                 <input class="au-input au-input--full" type="company_name" name="company_name" placeholder="company_name">

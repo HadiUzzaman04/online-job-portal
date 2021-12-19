@@ -15,8 +15,8 @@
                 <input class="au-input au-input--full" type="text" name="category_name" placeholder="category_name">
               </div>
               <div class="form-group">
-                <label>category_type</label>
-                <input class="au-input au-input--full" type="text" name="category_type" placeholder="category_type">
+                <label>Category Details</label>
+                <input class="au-input au-input--full" type="text" name="category_details" placeholder="category details">
               </div>
               <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>
             </form>

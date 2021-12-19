@@ -17,7 +17,7 @@ class CreateAddCategoriesTable extends Migration
             $table->id();
 
             $table->string('category_name');
-            $table->string('category_type');
+            $table->string('category_details');
             $table->timestamps();
         });
     }

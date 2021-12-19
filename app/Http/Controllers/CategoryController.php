@@ -38,7 +38,7 @@ class CategoryController extends Controller
     {
         AddCategory::create([
             'category_name'=>$request->input('category_name'),
-            'category_type'=>$request->input('category_type')
+            'category_details'=>$request->input('category_details')
         ]);
         return redirect('/tablecategory');
     }

@@ -60,9 +60,9 @@ Route::get('/jobs',[TableController::class,'jobs'])->name('jobs');
 Route::get('/testimonials',[TableController::class,'testimonials'])->name('testimonials');
 
 
-//NEW
+//Company
 
-Route::get('/table',[ManageCompanyController::class,'index'])->name('index');
+Route::get('/table',[ManageCompanyController::class,'index'])->name('index.company');
 Route::get('/table/create',[ManageCompanyController::class,'create'])->name('create');
 Route::post('/table/store',[ManageCompanyController::class,'store'])->name('store');
 
