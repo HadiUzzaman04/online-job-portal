@@ -17,16 +17,20 @@
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                
+                                <th>ID</th>
                                 <th>Title</th>
                                 <th>Discription</th>
                             </tr>
                         </thead>
+
                         <tbody>
+                            @foreach($events as $key=>$event)
                             <tr>
-                                <td>Title</td>
-                                <td>Description</td>
+                                <td>{{$key+1}}</td>
+                                <td>{{$event->event_title}}</td>
+                                <td>{{$event->event_description}}</td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <!-- END DATA TABLE-->

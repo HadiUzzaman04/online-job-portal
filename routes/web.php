@@ -9,6 +9,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\Website\JobController;
 use App\Http\Controllers\Website\AboutusController;
 use App\Http\Controllers\Website\ContactusController;
+use App\Http\Controllers\website\EventsController as WebsiteEventsController;
+use App\Http\Controllers\website\layout\EventsController;
 use App\Http\Controllers\website\login\ApplicantLoginController;
 use App\Http\Controllers\Website\TestimonialsController;
 use App\Http\Controllers\website\login\CompanyLoginController;
@@ -25,6 +27,7 @@ Route::get('/',function(){
 Route::get('/website/job',[JobController::class,'job'])->name('jobs.index');
 Route::get('/website/aboutus',[AboutusController::class,'aboutus'])->name('aboutus.index');
 Route::get('/website/contactus',[ContactusController::class,'contactus'])->name('contactus.index');
+Route::get('/website/events',[WebsiteEventsController::class,'events'])->name('events.index');
 Route::get('/website/testimonials',[TestimonialsController::class,'testimonials'])->name('testimonials.index');
 
 //login
@@ -72,6 +75,8 @@ Route::post('/table/store/category',[CategoryController::class,'storeCategory'])
 
 Route::get('/event',[EventController::class,'index'])->name('index');
 Route::get('/event/create',[EventController::class,'create'])->name('event.index');
+Route::post('/event/store',[EventController::class,'store'])->name('add.event.store');
+
 
 
 

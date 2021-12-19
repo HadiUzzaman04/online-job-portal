@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AddEvent;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -13,7 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view ('admin.layout.events');
+        $events=AddEvent::all();
+        return view ('admin.layout.events',compact('events'));
     }
 
     /**
@@ -34,7 +36,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        AddEvent::create([
+            'event_title'=>$request->input('event_title'),
+            'event_description'=>$request->input('event_description')
+
+        ]);
+        return redirect('/event');
     }
 
     /**

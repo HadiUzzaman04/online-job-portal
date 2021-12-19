@@ -17,7 +17,7 @@
 
                 <li class="nav-item"><a class="nav-link" href="{{route('aboutus.index')}}">About Us</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="Events.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('events.index')}}">Events</a></li>
                 
                 <li class="nav-item"><a class="nav-link" href="{{route('contactus.index')}}">Contact Us</a></li>
 

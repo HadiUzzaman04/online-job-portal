@@ -29,7 +29,7 @@
                         </li>
                         <li>
                             <a href="{{route('indexCategory')}}">
-                                <i class="fas fa-table"></i>Catagories </a>
+                                <i class="fas fa-table"></i>Categories </a>
                         </li>
                         <li>
                             <a href="{{route('index')}}">
