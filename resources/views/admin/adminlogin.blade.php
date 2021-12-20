@@ -12,19 +12,20 @@
 				
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="{{route('admin.do.login')}}" method="post">
+					@csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input name="email" type="email" class="form-control" placeholder="email">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input name="password" type="password" class="form-control" placeholder="password">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me

@@ -14,12 +14,15 @@ use App\Http\Controllers\website\layout\EventsController;
 use App\Http\Controllers\website\login\ApplicantLoginController;
 use App\Http\Controllers\Website\TestimonialsController;
 use App\Http\Controllers\website\login\CompanyLoginController;
-use App\Http\Controllers\website\login\AdminLoginController;
+use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\website\login\RegestationController;
 
 
 
 //Website
+Route::get('/', function (){
+    return redirect()->route('Home');
+});
 Route::get('/',function(){
     return view('website.layouts.content');
 })->name('Home');
@@ -41,7 +44,8 @@ Route::get('/applicant/logout',[ApplicantLoginController::class,'logout'])->name
 
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
 
-//Route::get('/admin/login',[AdminLoginController::class,'index'])->name('admin.login');
+
+
 
 
 
@@ -49,35 +53,42 @@ Route::get('/company/login',[CompanyLoginController::class,'index'])->name('comp
 
 
 //Admin
+Route::get('/admin/login',[AdminLoginController::class,'login'])->name('admin.login');
+Route::post('/admin/dologin',[AdminLoginController::class,'dologin'])->name('admin.do.login');
 
-Route::get('/admin',[AdminController::class,'testtow']);
 
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/admin',function(){
+        return view('admin.index');
+    })->name('admin.dashboard');
+    Route::get('/admin/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
 
+// Route::get('/admin/test',[AdminController::class,'testtow']);
 
-Route::get('/applicant',[TableController::class,'applicant'])->name('applicant');
-Route::get('/catagories',[TableController::class,'catagories'])->name('catagories');
-Route::get('/jobs',[TableController::class,'jobs'])->name('jobs');
-Route::get('/testimonials',[TableController::class,'testimonials'])->name('testimonials');
+Route::get('/admin/applicant',[TableController::class,'applicant'])->name('applicant');
+Route::get('/admin/catagories',[TableController::class,'catagories'])->name('catagories');
+Route::get('/admin/jobs',[TableController::class,'jobs'])->name('jobs');
+Route::get('/admin/testimonials',[TableController::class,'testimonials'])->name('testimonials');
 
 
 //Company
 
-Route::get('/table',[ManageCompanyController::class,'index'])->name('index.company');
-Route::get('/table/create',[ManageCompanyController::class,'create'])->name('create');
-Route::post('/table/store',[ManageCompanyController::class,'store'])->name('store');
+Route::get('/admin/table',[ManageCompanyController::class,'index'])->name('index.company');
+Route::get('/admin/table/create',[ManageCompanyController::class,'create'])->name('create');
+Route::post('/admin/table/store',[ManageCompanyController::class,'store'])->name('store');
 
 //Category
 
-Route::get('/tablecategory',[CategoryController::class,'indexCategory'])->name('indexCategory');
-Route::get('/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
-Route::post('/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
+Route::get('/admin/tablecategory',[CategoryController::class,'indexCategory'])->name('indexCategory');
+Route::get('/admin/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
+Route::post('/admin/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
 
 //Event
 
-Route::get('/event',[EventController::class,'index'])->name('index');
-Route::get('/event/create',[EventController::class,'create'])->name('event.index');
-Route::post('/event/store',[EventController::class,'store'])->name('add.event.store');
+Route::get('/admin/event',[EventController::class,'index'])->name('index');
+Route::get('/admin/event/create',[EventController::class,'create'])->name('event.index');
+Route::post('/admin/event/store',[EventController::class,'store'])->name('add.event.store');
 
 
-
+});
 

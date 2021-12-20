@@ -7,6 +7,7 @@
       <div class="login-wrap">
         <div class="login-content">
           <div class="login-form">
+          <h2 class="text-center">Add Category</h2>
             <form action="{{route('storeCategory')}}" method="post" enctype="multipart/form-data">
               @csrf
               

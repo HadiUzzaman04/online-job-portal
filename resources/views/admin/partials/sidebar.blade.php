@@ -38,6 +38,11 @@
                         <li>
                             <a href="{{route('testimonials')}}">
                                 <i class="fas fa-table"></i>Testimonials </a>
+                                
+                        </li>
+                        <li>
+                            <a href="{{route('admin.logout')}}">
+                                <i class="fas fa-table"></i>Logout </a>
                         </li>
                     </ul>
                 </nav>
