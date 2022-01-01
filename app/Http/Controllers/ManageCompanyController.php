@@ -13,11 +13,17 @@ class ManageCompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $companies = AddCompany::all();
+        $search = $request['search'] ?? "";
+        if($search !=""){
+                $companies=AddCompany::where('company_name','LIKE',"%$search%")->get();
+        }else{
+            $companies = AddCompany::all();
+        }            
         return view ('admin.table.companies',[
-            'companies'=>$companies
+            'companies'=>$companies,
+            'search'=>$search
         ]);
 
     }
@@ -48,7 +54,7 @@ class ManageCompanyController extends Controller
             'email'=>$request->input('email'),
             'password'=>$request->input('password'),
         ]);
-        return redirect('/table');
+        return redirect('/admin/table');
     }
 
     /**

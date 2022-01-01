@@ -52,7 +52,7 @@ Route::get('/company/login',[CompanyLoginController::class,'index'])->name('comp
 
 
 
-//Admin
+//Admin Login
 Route::get('/admin/login',[AdminLoginController::class,'login'])->name('admin.login');
 Route::post('/admin/dologin',[AdminLoginController::class,'dologin'])->name('admin.do.login');
 
