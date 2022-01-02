@@ -57,7 +57,7 @@ Route::get('/admin/login',[AdminLoginController::class,'login'])->name('admin.lo
 Route::post('/admin/dologin',[AdminLoginController::class,'dologin'])->name('admin.do.login');
 
 
-Route::group(['middleware'=>'auth'],function(){
+Route::group(['middleware'=>['auth','admin']],function(){
     Route::get('/admin',function(){
         return view('admin.index');
     })->name('admin.dashboard');

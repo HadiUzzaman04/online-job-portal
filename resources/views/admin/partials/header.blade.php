@@ -8,9 +8,7 @@
                                 
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/#" alt="Hadi" />
-                                        </div>
+                                       
                                         <div class="content">
                                             
                                         </div>

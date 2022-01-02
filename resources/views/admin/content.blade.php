@@ -32,7 +32,7 @@
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>10368</h2>
+                                                <h2>10</h2>
                                                 <span>Current Jobs</span>
                                             </div>
                                         </div>
@@ -50,7 +50,7 @@
                                                 <i class="zmdi zmdi-calendar-note"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>1,086</h2>
+                                                <h2>6</h2>
                                                 <span>this week</span>
                                             </div>
                                         </div>
@@ -68,7 +68,7 @@
                                                 <i class="zmdi zmdi-money"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>$1,060,386</h2>
+                                                <h2>$10</h2>
                                                 <span>total earnings</span>
                                             </div>
                                         </div>
