@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AddJob;
 use Illuminate\Http\Request;
 
 class TableController extends Controller
@@ -30,7 +31,8 @@ class TableController extends Controller
 
 
     public function jobs (){
-        return view ('admin.layout.jobs');
+        $jobs=AddJob::all();
+        return view ('admin.layout.jobs',compact('jobs'));
     }
     
     public function testimonials (){

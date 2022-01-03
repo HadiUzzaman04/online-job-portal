@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
+use App\Models\AddJob;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
     public function job(){
-        return view('website.layouts.jobs');
+
+        $jobs=AddJob::all();
+        
+        return view('website.layouts.jobs',compact('jobs'));
     }
 }

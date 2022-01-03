@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AddCategory extends Model
+class AddJob extends Model
 {
     use HasFactory;
-    protected $fillable=['category','category_details'];
+    protected $guarded=[''];
+
     public function job(){
         return $this->belongsTo(AddCategory::class);
     }

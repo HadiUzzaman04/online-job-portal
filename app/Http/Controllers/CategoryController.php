@@ -37,10 +37,10 @@ class CategoryController extends Controller
     public function storeCategory(Request $request)
     {
         AddCategory::create([
-            'category_name'=>$request->input('category_name'),
+            'category'=>$request->input('category'),
             'category_details'=>$request->input('category_details')
         ]);
-        return redirect('/tablecategory');
+        return redirect('/admin/tablecategory');
     }
 
     /**

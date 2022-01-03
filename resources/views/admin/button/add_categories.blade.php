@@ -13,7 +13,7 @@
               
               <div class="form-group">
                 <label>category_name</label>
-                <input class="au-input au-input--full" type="text" name="category_name" placeholder="category_name">
+                <input class="au-input au-input--full" type="text" name="category" placeholder="category_name">
               </div>
               <div class="form-group">
                 <label>Category Details</label>

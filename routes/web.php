@@ -16,7 +16,8 @@ use App\Http\Controllers\Website\TestimonialsController;
 use App\Http\Controllers\website\login\CompanyLoginController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\website\login\RegestationController;
-
+use App\Http\Controllers\JobController as AdminJobController;
+use App\Models\AddJob;
 
 
 //Website
@@ -24,7 +25,8 @@ Route::get('/', function (){
     return redirect()->route('Home');
 });
 Route::get('/',function(){
-    return view('website.layouts.content');
+    $jobs=AddJob::all();
+    return view('website.layouts.content',compact('jobs'));
 })->name('Home');
 
 Route::get('/website/job',[JobController::class,'job'])->name('jobs.index');
@@ -82,6 +84,13 @@ Route::post('/admin/table/store',[ManageCompanyController::class,'store'])->name
 Route::get('/admin/tablecategory',[CategoryController::class,'indexCategory'])->name('indexCategory');
 Route::get('/admin/table/create/category',[CategoryController::class,'createCategory'])->name('createCategory');
 Route::post('/admin/table/store/category',[CategoryController::class,'storeCategory'])->name('storeCategory');
+
+
+//Job
+
+Route::get('/admin/job',[AdminJobController::class,'job'])->name('add.job');
+Route::post('/admin/post/job',[AdminJobController::class,'jobPost'])->name('admin.job.post');
+
 
 //Event
 

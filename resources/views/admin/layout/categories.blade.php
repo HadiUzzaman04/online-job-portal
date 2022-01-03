@@ -29,7 +29,7 @@
                             @foreach($categories as $key=>$Category)
                                 <tr> 
                                     <td>{{$key+1}}</td>
-                                    <td>{{$Category->category_name}}</td>
+                                    <td>{{$Category->category}}</td>
                                     <td>{{$Category->category_details}}</td>
                                 </tr>
                             @endforeach

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddCategoriesTable extends Migration
+class CreateAddJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateAddCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('add_categories', function (Blueprint $table) {
+        Schema::create('add_jobs', function (Blueprint $table) {
             $table->id();
-
+            $table->string('job_title');
+            $table->string('vacancy');
             $table->string('category');
-            $table->string('category_details');
+            $table->string('years_of_experience');
+            $table->string('type');
+            $table->string('description');            
+
             $table->timestamps();
         });
     }
@@ -29,6 +33,6 @@ class CreateAddCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_categories');
+        Schema::dropIfExists('add_jobs');
     }
 }
