@@ -71,8 +71,8 @@
 
             
           </div>
-          <a class="btn btn-primary m-4" href="">view</a>
-          <a class="btn btn-success m-4" href="{{  }}">Apply Here</a>
+          <a class="btn btn-primary m-4" href="{{route('website.layouts.view.view_details',$job->id)}}">view</a>
+          <a class="btn btn-success m-4" href="{{route('website.layouts.view.application')}}">Apply Here</a>
 
         </div>
       </div>

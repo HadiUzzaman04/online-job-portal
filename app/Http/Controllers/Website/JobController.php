@@ -14,4 +14,12 @@ class JobController extends Controller
         
         return view('website.layouts.jobs',compact('jobs'));
     }
+    public function viewjob($id){
+        // dd($id);
+        $job=AddJob::find($id);
+        return view('website.layouts.view.view_details',compact('job'));
+    }
+    public function application(){
+        return view('website.layouts.view.application');
+    }
 }

@@ -46,8 +46,9 @@ Route::get('/applicant/logout',[ApplicantLoginController::class,'logout'])->name
 
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
 
-
-
+//Jobs
+Route::get('/website/jobs/view/details/{id}',[JobController::class,'viewjob'])->name('website.layouts.view.view_details');
+Route::get('/website/job/application',[JobController::class,'application'])->name('website.layouts.view.application');
 
 
 
