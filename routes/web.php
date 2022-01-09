@@ -35,7 +35,7 @@ Route::get('/website/contactus',[ContactusController::class,'contactus'])->name(
 Route::get('/website/events',[WebsiteEventsController::class,'events'])->name('events.index');
 Route::get('/website/testimonials',[TestimonialsController::class,'testimonials'])->name('testimonials.index');
 
-//login
+//login Applicant
 
 Route::get('/applicant/login',[ApplicantLoginController::class,'index'])->name('applicant.login');
 Route::post('/applicant/do/login',[ApplicantLoginController::class,'dologin'])->name('applicant.do.login');
@@ -44,7 +44,11 @@ Route::get('/applicant/do/regestation',[ApplicantLoginController::class,'create'
 Route::post('/applicant/regestation/done',[ApplicantLoginController::class,'store'])->name('applicant.registation.done');
 Route::get('/applicant/logout',[ApplicantLoginController::class,'logout'])->name('applicant.logout');
 
+
+//Company Registration
 Route::get('/company/login',[CompanyLoginController::class,'index'])->name('company.login');
+Route::get('/company/registration',[RegestationController::class,'regestation'])->name('company.regestation');
+Route::post('/company/do/registration',[RegestationController::class,'doregestation'])->name('company.do.regestation');
 
 //Jobs
 Route::get('/website/jobs/view/details/{id}',[JobController::class,'viewjob'])->name('website.layouts.view.view_details');

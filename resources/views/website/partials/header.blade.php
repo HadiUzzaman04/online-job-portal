@@ -23,6 +23,9 @@
 
                  <li class="nav-item"><a class="nav-link" href="{{route('testimonials.index')}}">Testimonials</a></li>
 
+                 <li class="nav-item"><a class="nav-link" href="{{route('company.regestation')}}">Company</a></li>
+
+
                  @if(auth()->user())
                  <li class="nav-item"><a class="nav-link" href="{{route('applicant.logout')}}">Logout</a></li>
                  <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>

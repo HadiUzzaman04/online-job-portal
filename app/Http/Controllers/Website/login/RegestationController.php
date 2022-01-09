@@ -4,6 +4,7 @@ namespace App\Http\Controllers\website\login;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class RegestationController extends Controller
 {
@@ -12,9 +13,9 @@ class RegestationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function regestation()
     {
-        
+        return view('website.pages.companyregestation');
     }
 
     /**
@@ -33,9 +34,19 @@ class RegestationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function doregestation(Request $request)
     {
-        dd($request);
+        // dd($request->all());
+        user::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'password'=>bcrypt($request->password),
+            'type'=>$request->text,
+            'role'=>$request->company_role
+            
+        ]);
+        return redirect('/');
     }
 
     /**
