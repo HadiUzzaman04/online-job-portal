@@ -32,7 +32,7 @@
 
 
                  @else
-                 <li class="nav-item"><a class="nav-link" href="{{route('applicant.login')}}">Login</a></li>
+                 <li class="nav-item"><a class="nav-link" href="{{route('applicant.login')}}">Applicant</a></li>
                  @endif
 
                  <!-- <li class="nav-item dropdown">

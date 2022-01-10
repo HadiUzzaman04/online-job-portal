@@ -22,6 +22,7 @@
                                 <th>Category</th>
                                 <th>Years Of Experience</th>
                                 <th>Type</th>
+                                <th>Deadline</th>
                                 <th>Description</th>
                             </tr>
                         </thead>
@@ -34,6 +35,7 @@
                                 <td>{{ $job->category }}</td>
                                 <td>{{ $job->years_of_experience }}</td>
                                 <td>{{ $job->type }}</td>
+                                <td>{{ $job->deadline }}</td>
                                 <td>{{ $job->description }}</td>
 
                             </tr>

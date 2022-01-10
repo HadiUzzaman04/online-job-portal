@@ -43,12 +43,14 @@
 
             <h6>Job Type: <pre>{{$job-> type}}</pre></h6>
 
+            <h6>Deadline: <pre>{{$job-> deadline}}</pre></h6>
+
             <h6>Job Description: <pre>{{$job-> description}}</pre></h6>
 
             
           </div>
           <a class="btn btn-primary m-4" href="{{route('website.layouts.view.view_details',$job->id)}}">view</a>
-          <a class="btn btn-success m-4" href="">Apply Here</a>
+          <a class="btn btn-success m-4" href="{{route('website.layouts.view.application')}}">Apply Here</a>
 
         </div>
       </div>

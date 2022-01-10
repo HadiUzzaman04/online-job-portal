@@ -15,10 +15,11 @@ use App\Http\Controllers\website\login\ApplicantLoginController;
 use App\Http\Controllers\Website\TestimonialsController;
 use App\Http\Controllers\website\login\CompanyLoginController;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\website\login\RegestationController;
 use App\Http\Controllers\JobController as AdminJobController;
 use App\Models\AddJob;
-
+use Illuminate\Console\Application;
 
 //Website
 Route::get('/', function (){
@@ -52,6 +53,10 @@ Route::post('/company/do/registration',[RegestationController::class,'doregestat
 
 //Jobs
 Route::get('/website/jobs/view/details/{id}',[JobController::class,'viewjob'])->name('website.layouts.view.view_details');
+
+
+//Application website
+
 Route::get('/website/job/application',[JobController::class,'application'])->name('website.layouts.view.application');
 
 
@@ -95,6 +100,11 @@ Route::post('/admin/table/store/category',[CategoryController::class,'storeCateg
 
 Route::get('/admin/job',[AdminJobController::class,'job'])->name('add.job');
 Route::post('/admin/post/job',[AdminJobController::class,'jobPost'])->name('admin.job.post');
+
+
+//Applications
+
+Route::get('/admin/applications',[ApplicationController::class,'application'])->name('application');
 
 
 //Event

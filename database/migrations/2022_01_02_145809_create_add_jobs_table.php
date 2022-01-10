@@ -20,6 +20,7 @@ class CreateAddJobsTable extends Migration
             $table->string('category');
             $table->string('years_of_experience');
             $table->string('type');
+            $table->string('deadline');
             $table->string('description');            
 
             $table->timestamps();

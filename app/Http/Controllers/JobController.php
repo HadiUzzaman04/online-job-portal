@@ -11,9 +11,9 @@ class JobController extends Controller
 {
     public function job()
     {
-        $categories=AddCategory::class::with('job')->get();
-        $jobs=AddJob::all();
-        return view ('admin.button.add_job',compact('jobs','categories'));
+        $categories=AddCategory::all();
+     
+        return view ('admin.button.add_job',compact('categories'));
     }
     public function jobPost(Request $request){
         // dd($request);
@@ -23,6 +23,7 @@ class JobController extends Controller
             'category'=>$request->input('category'),
             'years_of_experience'=>$request->input('years_of_experience'),
             'type'=>$request->input('type'),
+            'deadline'=>$request->input('deadline'),
             'description'=>$request->input('description'),
 
         ]);

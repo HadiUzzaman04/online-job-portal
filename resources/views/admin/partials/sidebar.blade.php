@@ -28,6 +28,10 @@
                                 <i class="fas fa-table"></i>Jobs </a>
                         </li>
                         <li>
+                            <a href="{{route('application')}}">
+                                <i class="fas fa-table"></i>Application </a>
+                        </li>
+                        <li>
                             <a href="{{route('indexCategory')}}">
                                 <i class="fas fa-table"></i>Categories </a>
                         </li>

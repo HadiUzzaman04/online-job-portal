@@ -29,7 +29,7 @@
                                 <th>Company Name</th>
                                 <th>Company Type</th>
                                 <th>Company Email</th>
-                                <th>Company Password</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -39,7 +39,7 @@
                                 <td>{{$company->company_name}}</td>
                                 <td>{{$company->company_type}}</td>
                                 <td>{{$company->email}}</td>
-                                <td>{{$company->password}}</td>
+                               
                             </tr>
                             @endforeach
                         </tbody>

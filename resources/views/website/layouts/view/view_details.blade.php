@@ -2,6 +2,11 @@
 @section('contents')
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <h4>Title:
   <pre>{{$job-> job_title}}</pre>
@@ -21,10 +26,16 @@
   <pre>{{$job-> type}}</pre>
 </h6>
 
+<h6>Deadline:
+  <pre>{{$job-> deadline}}</pre>
+</h6>
+
 <h6>Job Description:
   <pre>{{$job-> description}}</pre>
 </h6>
 
+
+<a class="btn btn-success m-4" href="{{route('website.layouts.view.application')}}">Apply Here</a>
 
 
 

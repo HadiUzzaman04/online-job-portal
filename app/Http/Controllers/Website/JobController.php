@@ -10,6 +10,7 @@ class JobController extends Controller
 {
     public function job(){
 
+        // dd("ok");
         $jobs=AddJob::all();
         
         return view('website.layouts.jobs',compact('jobs'));
