@@ -20,6 +20,8 @@
                                 <th>ID</th>
                                 <th>Title</th>
                                 <th>Discription</th>
+                                <th>Action</th>
+
                             </tr>
                         </thead>
 
@@ -29,6 +31,10 @@
                                 <td>{{$key+1}}</td>
                                 <td>{{$event->event_title}}</td>
                                 <td>{{$event->event_description}}</td>
+                                <td style="display: flex;">
+                                    <a href="{{route('admin.event.update',$event->id)}}" class=" btn-success" style="margin-right: 5px;">Update</a>
+                                    <a href="{{ route('admin.event.delete',$event->id) }}" class=" btn-danger">Delete</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

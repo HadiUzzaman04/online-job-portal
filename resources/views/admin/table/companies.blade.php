@@ -29,6 +29,8 @@
                                 <th>Company Name</th>
                                 <th>Company Type</th>
                                 <th>Company Email</th>
+                                <th>Action</th>
+
                                 
                             </tr>
                         </thead>
@@ -39,6 +41,9 @@
                                 <td>{{$company->company_name}}</td>
                                 <td>{{$company->company_type}}</td>
                                 <td>{{$company->email}}</td>
+                                <td></td>
+
+                                
                                
                             </tr>
                             @endforeach

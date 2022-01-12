@@ -24,6 +24,7 @@
                                 <th>Type</th>
                                 <th>Deadline</th>
                                 <th>Description</th>
+                                <th>action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,6 +38,10 @@
                                 <td>{{ $job->type }}</td>
                                 <td>{{ $job->deadline }}</td>
                                 <td>{{ $job->description }}</td>
+                                <td style="display: flex;">
+                                    <a href="{{ route('admin.job.edit',$job->id)  }}" class=" btn-success" style="margin-right: 5px;">Update</a>
+                                    <a href="{{ route('admin.job.delete',$job->id) }}" class=" btn-danger">Delete</a>
+                                </td>
 
                             </tr>
                             @endforeach

@@ -10,7 +10,7 @@ class JobController extends Controller
 {
     public function job(){
 $today=date('Y-m-d');
-        // dd("ok");
+
         $jobs=AddJob::where('deadline','>=',$today)->get();
         
         return view('website.layouts.jobs',compact('jobs'));

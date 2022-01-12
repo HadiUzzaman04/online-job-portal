@@ -100,6 +100,9 @@ Route::post('/admin/table/store/category',[CategoryController::class,'storeCateg
 
 Route::get('/admin/job',[AdminJobController::class,'job'])->name('add.job');
 Route::post('/admin/post/job',[AdminJobController::class,'jobPost'])->name('admin.job.post');
+Route::get('/admin/delete/job/{id}',[AdminJobController::class,'jobDelete'])->name('admin.job.delete');
+Route::get('/admin/edit/job/{id}',[AdminJobController::class,'jobEdit'])->name('admin.job.edit');
+Route::put('/admin/update/job/{id}',[AdminJobController::class,'jobUpdate'])->name('admin.update.job');
 
 
 //Applications
@@ -112,6 +115,9 @@ Route::get('/admin/applications',[ApplicationController::class,'application'])->
 Route::get('/admin/event',[EventController::class,'index'])->name('index');
 Route::get('/admin/event/create',[EventController::class,'create'])->name('event.index');
 Route::post('/admin/event/store',[EventController::class,'store'])->name('add.event.store');
+Route::get('/admin/delete/event/{id}',[EventController::class,'eventDelete'])->name('admin.event.delete');
+Route::get('/admin/edit/event/{id}',[EventController::class,'EventEdit'])->name('admin.event.update');
+Route::put('/admin/update/event/{id}',[EventController::class,'EventUpdate'])->name('admin.update.event');
 
 
 });

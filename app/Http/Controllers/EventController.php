@@ -62,9 +62,11 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function EventEdit($id)
     {
-        //
+        
+        $events = AddEvent::find($id);
+        return view('admin.button.edit_event',compact('events'));
     }
 
     /**
@@ -74,19 +76,30 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    
+    public function EventUpdate(Request $request, $id){
 
+        $events=AddEvent::find($id);
+        $events->update([
+            'event_title'=>$request->input('event_title'),
+            'event_description'=>$request->input('event_description'),
+        ]);
+        $events->save();
+
+        return redirect()->route('index');
+    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eventDelete($id)
     {
-        //
+        // dd($id);
+        $events = AddEvent::find($id);
+        $events ->delete();
+
+        return redirect()->back();
     }
 }

@@ -8,25 +8,25 @@
         <div class="login-form">
           <h2 class="text-center">Add Job</h2>
 
-          <form action="{{ route('admin.job.post') }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('admin.update.job',$jobs->id) }}" method="post" enctype="multipart/form-data">
             @csrf
-
+            @method('PUT')
             <div class="form-group">
               <label>Job_Title</label>
-              <input class="au-input au-input--full" type="text" name="job_title" placeholder="Enter Job Title">
+              <input class="au-input au-input--full" type="text" name="job_title" value="{{ $jobs-> job_title}}" placeholder="Enter Job Title">
             </div>
             <br>
             <div class="form-group">
               <label>Vacancy</label>
-              <input class="au-input au-input--full" type="text" name="vacancy" placeholder="Vacancy">
+              <input class="au-input au-input--full" type="text" name="vacancy" value="{{ $jobs-> vacancy}}" placeholder="Vacancy">
             </div>
             <br>
             <div class="form-group">
               <strong>Category</strong>
               <select name="category" id="">
-                @foreach($categories as $c)
-                <option value="{{ $c->category }}"> {{ $c->category }} </option>
-                @endforeach
+                
+                <option value="{{ $jobs->category }}">{{ $jobs->category }}</option>
+                
               </select>
 
               <!-- <input class="au-input au-input--full" type="text" name="Category" placeholder="Category"> -->
@@ -34,7 +34,7 @@
             <br>
             <div class="form-group">
               <label>Years Of Experience</label>
-              <input class="au-input au-input--full" type="tejobsxt" name="years_of_experience" placeholder="Years Of Experience">
+              <input class="au-input au-input--full" type="tejobsxt" name="years_of_experience" value="{{ $jobs-> years_of_experience}}" placeholder="Years Of Experience">
             </div>
             <br>
             <div class="form-group">
@@ -50,12 +50,12 @@
             <br>
             <div class="form-group">
               <label>Description</label>
-              <textarea class="au-input au-input--full" type="text" name="description" placeholder="Description"></textarea>
+              <textarea class="au-input au-input--full" type="text" name="description"  placeholder="Description">{{ $jobs-> description}}</textarea>
             </div>
             <br>
             <div class="form-group">
               <label>Deadline</label>
-              <input class="au-input au-input--full" type="date" name="deadline" placeholder="Deadline">
+              <input class="au-input au-input--full" type="date" name="deadline" value="{{ $jobs-> deadline}}" placeholder="Deadline">
             </div>
             <br>
             <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>
