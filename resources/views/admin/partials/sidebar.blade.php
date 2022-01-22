@@ -16,11 +16,11 @@
                         </li>
                        
                         <li>
-                            <a href="{{route('index.company')}}">
+                            <a href="{{route('viewCompany')}}">
                                 <i class="fas fa-table"></i>Companies </a>
                         </li>
                         <li>
-                            <a href="{{route('applicant')}}">
+                            <a href="{{route('viewApplicant')}}">
                                 <i class="fas fa-table"></i>Applicant </a>
                         </li>
                         <li>

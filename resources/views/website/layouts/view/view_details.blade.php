@@ -35,7 +35,7 @@
 </h6>
 
 
-<a class="btn btn-success m-4" href="{{route('website.layouts.view.application')}}">Apply Here</a>
+<a class="btn btn-success m-4" href="{{route('website.layouts.view.application',$job->id)}}">Apply Here</a>
 
 
 

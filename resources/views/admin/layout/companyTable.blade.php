@@ -8,7 +8,7 @@
                 <!-- button -->
                 <div class="card-body">
 
-                    <a href="{{route('create')}}" name="" class="btn-btn">Add Company</a>
+                    
                     <form action="">
 
                         <div class="input-group">
@@ -27,20 +27,23 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Company Name</th>
-                                <th>Company Type</th>
                                 <th>Company Email</th>
+                                <th>Company Phone</th>
+                                <th>Company Type</th>
                                 <th>Action</th>
 
                                 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($companies as $key=>$company)
+                            @foreach($companies as $company)
                             <tr>
-                                <td>{{$key+1}}</td>
-                                <td>{{$company->company_name}}</td>
-                                <td>{{$company->company_type}}</td>
+                                <td>{{$company->id}}</td>
+                                <td>{{$company->name}}</td>
+                                <td>{{$company->type}}</td>
                                 <td>{{$company->email}}</td>
+                                <td>{{$company->phone}}</td>
+
                                 <td></td>
 
                                 

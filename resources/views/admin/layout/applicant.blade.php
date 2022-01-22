@@ -2,22 +2,35 @@
 @section('contents')
 
 <div class="main-content">
-        <div class="section__content section__content--p30">
-            <div class="container-fluid">
-                <div class="row m-t-30">
-                    <!-- button -->
-                    
-                    <div class="col-md-12">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row m-t-30">
+                <!-- button -->
+
+                <div class="col-md-12">
                     <!-- DATA TABLE-->
                     <table class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                
+                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
                             </tr>
+
                         </thead>
+                        <tbody>
+                            @foreach($applicants as $applicant)
+                            <tr>
+
+                                <td>{{$applicant->id}}</td>
+                                <td>{{$applicant->name}}</td>
+                                <td>{{$applicant->email}}</td>
+                                <td>{{$applicant->phone}}</td>
+
+                            </tr>
+                            @endforeach
+                        </tbody>
                     </table>
                     <!-- END DATA TABLE-->
                 </div>
@@ -26,4 +39,4 @@
     </div>
 
 
-@endsection
+    @endsection

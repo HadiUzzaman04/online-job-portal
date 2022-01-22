@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class AddJob extends Model
 {
     use HasFactory;
-    protected $guarded=[''];
+    protected $guarded = [''];
 
-    public function job(){
-        return $this->belongsTo(AddCategory::class);
+    public function applications()
+    {
+        return $this->hasMany(Application::class);
     }
 }
