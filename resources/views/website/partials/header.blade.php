@@ -28,7 +28,7 @@
 
                  @if(auth()->user())
                  <li class="nav-item"><a class="nav-link" href="{{route('applicant.logout')}}">Logout</a></li>
-                 <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                 <li class="nav-item"><a class="nav-link" href="{{route('user.profile')}}">Profile</a></li>
 
 
                  @else

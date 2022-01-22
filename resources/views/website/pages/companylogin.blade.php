@@ -12,7 +12,7 @@
 				
 			</div>
 			<div class="card-body">
-				<form method="post" action="#">
+				<form method="post" action="{{route('company.do.login')}}">
 					@csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">

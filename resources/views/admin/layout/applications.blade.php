@@ -29,7 +29,10 @@
                                 <td>{{ $application->phone }}</td>
                                 <td><a href="{{ route('viewCv', $application->id) }}">View Cv</a></td>
                                 <td>{{ $application->job->job_title }}</td>
-                                <td>{{ $application->id }}</td>
+                                <td style="display: flex;">
+                                    <a href="#" class=" btn-success" style="margin-right: 5px;">Accept</a>
+                                    <a href="#" class=" btn-danger">Reject</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

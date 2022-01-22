@@ -19,6 +19,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\website\login\RegestationController;
 use App\Http\Controllers\JobController as AdminJobController;
 use App\Http\Controllers\ManageApplicantController;
+use App\Http\Controllers\website\ProfileController;
 use App\Models\AddJob;
 // use Illuminate\Console\Application;
 
@@ -37,7 +38,7 @@ Route::get('/website/contactus', [ContactusController::class, 'contactus'])->nam
 Route::get('/website/events', [WebsiteEventsController::class, 'events'])->name('events.index');
 Route::get('/website/testimonials', [TestimonialsController::class, 'testimonials'])->name('testimonials.index');
 
-//login Applicant
+//login and regestration Applicant
 
 Route::get('/applicant/login', [ApplicantLoginController::class, 'index'])->name('applicant.login');
 Route::post('/applicant/do/login', [ApplicantLoginController::class, 'dologin'])->name('applicant.do.login');
@@ -47,10 +48,18 @@ Route::post('/applicant/regestation/done', [ApplicantLoginController::class, 'st
 Route::get('/applicant/logout', [ApplicantLoginController::class, 'logout'])->name('applicant.logout');
 
 
-//Company Registration
+//Company login and Registration 
 Route::get('/company/login', [CompanyLoginController::class, 'index'])->name('company.login');
+Route::post('/company/do/login', [CompanyLoginController::class,'companydologin'])->name('company.do.login');
+
 Route::get('/company/registration', [RegestationController::class, 'regestation'])->name('company.regestation');
 Route::post('/company/do/registration', [RegestationController::class, 'doregestation'])->name('company.do.regestation');
+
+
+//Profile
+Route::get('/user/profile', [ProfileController::class,'userprofile'])->name('user.profile');
+
+
 
 //Jobs
 Route::get('/website/jobs/view/details/{jobId}', [JobController::class, 'viewjob'])->name('website.layouts.view.view_details');

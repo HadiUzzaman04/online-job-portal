@@ -12,5 +12,6 @@ class ManageApplicantController extends Controller
         return view('admin.layout.applicant',[
             'applicants' => $applicants
         ]);
+        
     }
 }
