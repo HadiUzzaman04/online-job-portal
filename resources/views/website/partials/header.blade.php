@@ -21,7 +21,7 @@
                 
                 <li class="nav-item"><a class="nav-link" href="{{route('contactus.index')}}">Contact Us</a></li>
 
-                 <li class="nav-item"><a class="nav-link" href="{{route('testimonials.index')}}">Testimonials</a></li>
+                 <!-- <li class="nav-item"><a class="nav-link" href="{{route('testimonials.index')}}">Testimonials</a></li> -->
 
                  <li class="nav-item"><a class="nav-link" href="{{route('company.login')}}">Company</a></li>
 

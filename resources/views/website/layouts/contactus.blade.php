@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>Lorem ipsum dolor</h4>
+              <h4></h4>
               <h2>Contact Us</h2>
             </div>
           </div>

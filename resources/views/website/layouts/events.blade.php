@@ -2,9 +2,7 @@
 
 @section ('contents')
 
-<br>
-<br>
-<br>
+
 
 <!-- <div class="row">
   <div class="col-sm-6">
@@ -20,7 +18,19 @@
   </div>
 </div> -->
 
-
+<!-- Page Content -->
+<div class="page-heading about-heading header-text" style="background-image: url(images/heading-6-1920x500.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <h4>Events</h4>
+          <h2>Available Event</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 @foreach($events as $KEY=>$EVENT)
       <div class="col-md-4">

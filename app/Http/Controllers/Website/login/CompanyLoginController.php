@@ -21,13 +21,13 @@ class CompanyLoginController extends Controller{
                 // dd($userPost);
                 // dd(Auth::attempt($userPost));
         if(Auth::attempt($userPost)){
-            return redirect('/');
+            return redirect('/admin');
         } else{
             return redirect('/');
         }
 
     }
-    public function logout(){
+    public function companylogout(){
         Auth::logout();
         return redirect('/');
     }

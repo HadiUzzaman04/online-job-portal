@@ -11,10 +11,10 @@
                     
                     <form action="">
 
-                        <div class="input-group">
+                        <!-- <div class="input-group">
                             <input type="search" name="search" class="form-control rounded" placeholder="Search"/>
                             <button type="submit" class="btn btn-outline-primary">search</button>
-                        </div>
+                        </div> -->
                     </form>
 
                 </div>

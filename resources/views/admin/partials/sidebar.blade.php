@@ -14,7 +14,7 @@
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                                             </ul>
                         </li>
-                       
+                        @if(auth()->user()->role=='admin')
                         <li>
                             <a href="{{route('viewCompany')}}">
                                 <i class="fas fa-table"></i>Companies </a>
@@ -23,14 +23,7 @@
                             <a href="{{route('viewApplicant')}}">
                                 <i class="fas fa-table"></i>Applicant </a>
                         </li>
-                        <li>
-                            <a href="{{route('jobs')}}">
-                                <i class="fas fa-table"></i>Jobs </a>
-                        </li>
-                        <li>
-                            <a href="{{route('application')}}">
-                                <i class="fas fa-table"></i>Application </a>
-                        </li>
+
                         <li>
                             <a href="{{route('indexCategory')}}">
                                 <i class="fas fa-table"></i>Categories </a>
@@ -39,12 +32,23 @@
                             <a href="{{route('index')}}">
                                 <i class="fas fa-table"></i>Events </a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="{{route('testimonials')}}"> 
                                 <i class="fas fa-table"></i>Testimonials </a>
                                 
+                        </li> -->
+                        <li>
+                        @endif
+                        <li>
+                            <a href="{{route('jobs')}}">
+                                <i class="fas fa-table"></i>Jobs </a>
                         </li>
                         <li>
+                            <a href="{{route('application')}}">
+                                <i class="fas fa-table"></i>Application </a>
+                        </li>
+                        
+                        
                             <a href="{{route('admin.logout')}}"> 
                                 <i class="fas fa-table"></i>Logout </a>
                         </li>

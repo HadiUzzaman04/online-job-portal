@@ -11,6 +11,10 @@
         <!-- PAGE CONTAINER-->
         <div class="page-container">
 
+
+
+        
+
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -33,7 +37,25 @@
                                             </div>
                                             <div class="text">
                                                 <h2>10</h2>
-                                                <span>Current Jobs</span>
+                                                <span>Applicant</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-chart">
+                                            <canvas id="widgetChart1"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-3">
+                                <div class="overview-item overview-item--c1">
+                                    <div class="overview__inner">
+                                        <div class="overview-box clearfix">
+                                            <div class="icon">
+                                                <i class="zmdi zmdi-account-o"></i>
+                                            </div>
+                                            <div class="text">
+                                                <h2>10</h2>
+                                                <span>Company</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
@@ -51,29 +73,11 @@
                                             </div>
                                             <div class="text">
                                                 <h2>6</h2>
-                                                <span>this week</span>
+                                                <span>Total jobs</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
                                             <canvas id="widgetChart3"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c4">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-money"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>$10</h2>
-                                                <span>total earnings</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart4"></canvas>
                                         </div>
                                     </div>
                                 </div>

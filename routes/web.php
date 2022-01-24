@@ -51,6 +51,7 @@ Route::get('/applicant/logout', [ApplicantLoginController::class, 'logout'])->na
 //Company login and Registration 
 Route::get('/company/login', [CompanyLoginController::class, 'index'])->name('company.login');
 Route::post('/company/do/login', [CompanyLoginController::class,'companydologin'])->name('company.do.login');
+Route::get('/compay/logout', [CompanyLoginController::class,'companylogout'])->name('company.logout');
 
 Route::get('/company/registration', [RegestationController::class, 'regestation'])->name('company.regestation');
 Route::post('/company/do/registration', [RegestationController::class, 'doregestation'])->name('company.do.regestation');
@@ -81,7 +82,7 @@ Route::post('/admin/dologin', [AdminLoginController::class, 'dologin'])->name('a
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin', function () {
-        return view('admin.index');
+        return view('admin.content');
     })->name('admin.dashboard');
     Route::get('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
