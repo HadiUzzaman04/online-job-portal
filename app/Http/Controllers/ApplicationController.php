@@ -17,4 +17,6 @@ class ApplicationController extends Controller
         $application = Application::findOrFail($id);
         return view('admin.layout.viewCv', compact('application'));
     }
+
+    
 }

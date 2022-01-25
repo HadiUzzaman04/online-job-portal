@@ -49,9 +49,11 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function delete($id)
     {
-        //
+        $categories = AddCategory::find($id);
+        $categories->delete();
+        return redirect()->back();
     }
 
     /**

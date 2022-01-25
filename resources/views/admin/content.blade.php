@@ -8,11 +8,7 @@
   
         <!-- END MENU SIDEBAR-->
 
-        <!-- PAGE CONTAINER-->
-        <div class="page-container">
-
-
-
+       
         
 
             <!-- MAIN CONTENT-->
@@ -96,8 +92,5 @@
                 </div>
             </div>
             <!-- END MAIN CONTENT-->
-            <!-- END PAGE CONTAINER-->
-        </div>
-
-    </div>
+     
 @endsection

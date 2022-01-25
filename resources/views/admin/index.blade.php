@@ -38,15 +38,33 @@
 
 </head>
 
+<body>
+<div class="page-wrapper">
 <!-- header -->
-<!-- @include('admin.partials.header') -->
+
 @include('admin.partials.sidebar')
-<!-- content -->
+
+ <!-- PAGE CONTAINER-->
+ <div class="page-container">
+ @include('admin.partials.header')
+
+ <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+
+
 @yield('contents')
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- content -->
 
 
 
-@include('admin.partials.footer')
+
+
 
   <!-- Jquery JS-->
   <script src="{{url('vendor/jquery-3.2.1.min.js')}}"></script>

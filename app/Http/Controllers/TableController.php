@@ -27,8 +27,14 @@ class TableController extends Controller
     }
 
 
-    public function jobs (){
-        $jobs=AddJob::all();
+    public function jobs (Request $request){
+        $search = $request['search'] ?? "";
+        if($search!=""){
+            $jobs=AddJob::where('job_title', 'LIKE', "%$search%")->get();
+        }
+        else{
+            $jobs=AddJob::all();
+        }
         return view ('admin.layout.jobs',compact('jobs'));
     }
     

@@ -1,42 +1,42 @@
 @extends('admin.index')
 @section('contents')
 
-<div class="main-content">
-    <div class="section__content section__content--p30">
-        <div class="container-fluid">
-            <div class="row m-t-30">
-                <!-- button -->
 
-                <div class="col-md-12">
-                    <!-- DATA TABLE-->
-                    <table class="table table-borderless table-data3">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                            </tr>
-
-                        </thead>
-                        <tbody>
-                            @foreach($applicants as $applicant)
-                            <tr>
-
-                                <td>{{$applicant->id}}</td>
-                                <td>{{$applicant->name}}</td>
-                                <td>{{$applicant->email}}</td>
-                                <td>{{$applicant->phone}}</td>
-
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                    <!-- END DATA TABLE-->
-                </div>
-            </div>
-        </div>
+<form action="">
+    <div class="search">
+        <input type="search" name="search" placeholder="Search" style="margin-left: 15px; border-radius:5px;width:40%;" />
+        <button style="display: inline;background:blue;padding:1%;border-radius:5px;"><i class="fas fa-search"></i></button>
     </div>
+</form>
+<br>
+<!-- DATA TABLE-->
+<table class="table-borderless table-data3">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
 
+    </thead>
+    <tbody>
+        @foreach($applicants as $applicant)
+        <tr>
 
-    @endsection
+            <td>{{$applicant->id}}</td>
+            <td>{{$applicant->name}}</td>
+            <td>{{$applicant->email}}</td>
+            <td>{{$applicant->phone}}</td>
+
+            <td>
+                <a href="{{ route('admin.delete.applicant',$applicant->id) }}">Delete</a>
+            </td>
+
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+<!-- END DATA TABLE-->
+@endsection

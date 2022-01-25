@@ -96,6 +96,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     //Company
     Route::get('/admin/company/table', [ManageCompanyController::class, 'viewCompany'])->name('viewCompany');
+    Route::get('/admin/delete/company/{id}', [ManageCompanyController::class, 'deleteCompany'])->name('admin.delete.company');
 
 
     //Applicant
@@ -106,6 +107,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin/tablecategory', [CategoryController::class, 'indexCategory'])->name('indexCategory');
     Route::get('/admin/table/create/category', [CategoryController::class, 'createCategory'])->name('createCategory');
     Route::post('/admin/table/store/category', [CategoryController::class, 'storeCategory'])->name('storeCategory');
+    Route::get('/admin/delete/category/{id}', [CategoryController::class, 'delete'])->name('admin.delete.category');
 
 
     //Job
@@ -121,6 +123,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     Route::get('/admin/applications', [ApplicationController::class, 'application'])->name('application');
     Route::get('/admin/viewCv/{id}', [ApplicationController::class, 'viewCv'])->name('viewCv');
+    Route::get('/admin/delete/applicant/{id}', [ManageApplicantController::class, 'delete'])->name('admin.delete.applicant');
 
     //Event
 

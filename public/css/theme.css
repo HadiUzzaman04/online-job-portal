@@ -4267,11 +4267,7 @@ h1{
 .btn, input {
   padding: 10px 15px;
 }
- input {
-  margin: 0 auto 15px;
-  display: block;
-  width: 220px;
-}
+
 .container-info {
   font-size: 0;
 }
@@ -4338,9 +4334,7 @@ h1{
 }
 
 /*add company button */
-.card-body{
-    margin:0 0 0 250px;
-}
+
 .btn-btn{
     background-color: white;
     color:#1b1b1b
@@ -4348,7 +4342,7 @@ h1{
 
 /* ----- Table ----- */
 .table {
-    margin: 0 0 0 250px;
+    
     width:75%;
 }
 
