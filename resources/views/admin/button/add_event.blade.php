@@ -15,12 +15,12 @@
               
               <div class="form-group">
                 <label>Event_Title</label>
-                <input class="au-input au-input--full" type="text" name="event_title" placeholder="event_title">
+                <input class="au-input au-input--full" type="text" name="event_title" placeholder="event_title" required>
               </div>
               <br>
               <div class="form-group">
                 <label>Event_Description</label>
-                <textarea class="au-input au-input--full" type="text" name="event_description" placeholder="event_description"></textarea>
+                <textarea class="au-input au-input--full" type="text" name="event_description" placeholder="event_description" required></textarea>
               </div>
               <br>
               <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>

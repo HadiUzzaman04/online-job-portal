@@ -10,11 +10,11 @@
 
       <div class="form-group">
         <label>category_name</label>
-        <input class="au-input au-input--full" type="text" name="category" placeholder="category_name">
+        <input class="au-input au-input--full" type="text" name="category" placeholder="category_name" required>
       </div>
       <div class="form-group">
         <label>Category Details</label>
-        <input class="au-input au-input--full" type="text" name="category_details" placeholder="category details">
+        <input class="au-input au-input--full" type="text" name="category_details" placeholder="category details" required>
       </div>
       <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>
     </form>

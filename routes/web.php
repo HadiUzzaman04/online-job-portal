@@ -38,6 +38,18 @@ Route::get('/website/contactus', [ContactusController::class, 'contactus'])->nam
 Route::get('/website/events', [WebsiteEventsController::class, 'events'])->name('events.index');
 Route::get('/website/testimonials', [TestimonialsController::class, 'testimonials'])->name('testimonials.index');
 
+
+
+Route::group(['middleware' => 'check_user'], function () {
+    //Application website
+
+    Route::get('/website/job/application/{jobId}', [JobController::class, 'application'])->name('website.layouts.view.application');
+    Route::post('/website/job/storeApplication', [JobController::class, 'storeApplication'])->name('storeApplication');
+});
+
+
+
+
 //login and regestration Applicant
 
 Route::get('/applicant/login', [ApplicantLoginController::class, 'index'])->name('applicant.login');
@@ -50,15 +62,16 @@ Route::get('/applicant/logout', [ApplicantLoginController::class, 'logout'])->na
 
 //Company login and Registration 
 Route::get('/company/login', [CompanyLoginController::class, 'index'])->name('company.login');
-Route::post('/company/do/login', [CompanyLoginController::class,'companydologin'])->name('company.do.login');
-Route::get('/compay/logout', [CompanyLoginController::class,'companylogout'])->name('company.logout');
+Route::post('/company/do/login', [CompanyLoginController::class, 'companydologin'])->name('company.do.login');
+Route::get('/compay/logout', [CompanyLoginController::class, 'companylogout'])->name('company.logout');
 
 Route::get('/company/registration', [RegestationController::class, 'regestation'])->name('company.regestation');
 Route::post('/company/do/registration', [RegestationController::class, 'doregestation'])->name('company.do.regestation');
 
 
 //Profile
-Route::get('/user/profile', [ProfileController::class,'userprofile'])->name('user.profile');
+Route::get('/user/profile', [ProfileController::class, 'userprofile'])->name('user.profile');
+Route::post('/user/update/profile/{id}', [ProfileController::class, 'updateprofile'])->name('user.update.profile');
 
 
 
@@ -66,10 +79,6 @@ Route::get('/user/profile', [ProfileController::class,'userprofile'])->name('use
 Route::get('/website/jobs/view/details/{jobId}', [JobController::class, 'viewjob'])->name('website.layouts.view.view_details');
 
 
-//Application website
-
-Route::get('/website/job/application/{jobId}', [JobController::class, 'application'])->name('website.layouts.view.application');
-Route::post('/website/job/storeApplication', [JobController::class, 'storeApplication'])->name('storeApplication');
 
 
 

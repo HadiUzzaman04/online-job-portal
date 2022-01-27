@@ -40,11 +40,11 @@
             <div class="left-content">
               <h4>About our office</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti.</p>
-              <ul class="social-icons">
+              <!-- <ul class="social-icons">
                 <li><a href="https://www.facebook.com/hadi24x7"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://www.twitter.com/hadi24x7"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/hadi-uzzaman-347b32147/"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>

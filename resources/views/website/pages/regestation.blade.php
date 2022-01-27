@@ -18,28 +18,28 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="text" name="name" class="form-control" placeholder="username">
+						<input type="text" name="name" class="form-control" placeholder="username" required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="email" name="email"class="form-control" placeholder="email">
+						<input type="email" name="email"class="form-control" placeholder="email" required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="phone" name="phone" class="form-control" placeholder="phone">
+						<input type="phone" name="phone" class="form-control" placeholder="phone" required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="password" name="password" class="form-control" placeholder="password">
+						<input type="password" name="password" class="form-control" placeholder="password" required>
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Regester" class="btn float-right regester_btn">

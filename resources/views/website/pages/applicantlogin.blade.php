@@ -18,14 +18,14 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="text" name="email" class="form-control" placeholder="email">
+						<input type="text" name="email" class="form-control" placeholder="email" required>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input type="password" name="password" class="form-control" placeholder="password">
+						<input type="password" name="password" class="form-control" placeholder="password" required>
 					</div>
 					<!-- <div class="row align-items-center remember">
 						<input type="checkbox">Remember Me

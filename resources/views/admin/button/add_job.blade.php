@@ -13,12 +13,12 @@
 
             <div class="form-group">
               <label>Job_Title</label>
-              <input class="au-input au-input--full" type="text" name="job_title" placeholder="Enter Job Title">
+              <input class="au-input au-input--full" type="text" name="job_title" placeholder="Enter Job Title" required>
             </div>
             <br>
             <div class="form-group">
               <label>Vacancy</label>
-              <input class="au-input au-input--full" type="text" name="vacancy" placeholder="Vacancy">
+              <input class="au-input au-input--full" type="text" name="vacancy" placeholder="Vacancy" required>
             </div>
             <br>
             <div class="form-group">
@@ -34,7 +34,7 @@
             <br>
             <div class="form-group">
               <label>Years Of Experience</label>
-              <input class="au-input au-input--full" type="tejobsxt" name="years_of_experience" placeholder="Years Of Experience">
+              <input class="au-input au-input--full" type="tejobsxt" name="years_of_experience" placeholder="Years Of Experience" required>
             </div>
             <br>
             <div class="form-group">
@@ -50,12 +50,12 @@
             <br>
             <div class="form-group">
               <label>Description</label>
-              <textarea class="au-input au-input--full" type="text" name="description" placeholder="Description"></textarea>
+              <textarea class="au-input au-input--full" type="text" name="description" placeholder="Description" required></textarea>
             </div>
             <br>
             <div class="form-group">
               <label>Deadline</label>
-              <input class="au-input au-input--full" type="date" name="deadline" placeholder="Deadline">
+              <input class="au-input au-input--full" type="date" name="deadline" placeholder="Deadline" required>
             </div>
             <br>
             <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>

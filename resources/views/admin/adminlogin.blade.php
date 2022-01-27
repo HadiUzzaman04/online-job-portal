@@ -18,14 +18,14 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input name="email" type="email" class="form-control" placeholder="email">
+						<input name="email" type="email" class="form-control" placeholder="email" require>
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"></span>
 						</div>
-						<input name="password" type="password" class="form-control" placeholder="password">
+						<input name="password" type="password" class="form-control" placeholder="password" require>
 					</div>
 					
 					<div class="form-group">
