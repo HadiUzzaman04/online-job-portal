@@ -27,7 +27,7 @@
             <td>{{$category->category}}</td>
             <td>{{$category->category_details}}</td>
             <td>
-                <a href="{{ route('admin.delete.category',$category->id) }}">Delete</a>
+                <a href="{{ route('admin.delete.category',$category->id) }}" class=" btn-danger">Delete</a>
             </td>
         </tr>
         @endforeach

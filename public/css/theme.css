@@ -331,8 +331,8 @@ section {
 }
 
 .page-content--bge5 {
-    background: white;
-    height: 100vh;
+    background: #dfe6e9;
+    height: 45vh;
 }
 
 .login-wrap {
@@ -4243,7 +4243,7 @@ h1{
   width: 600px;
   margin: 30px auto 0;
   height: 320px;
-  background-color: white;
+  background-color: #dfe6e9;
   top: 50%;
   margin-top: -160px;
   transition: all 0.5s;

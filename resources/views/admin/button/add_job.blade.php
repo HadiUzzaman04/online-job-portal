@@ -1,5 +1,6 @@
 @extends('admin.index')
 @section('contents')
+<br><br><br>
 
 <div class="page-content--bge5">
   <div class="container">
@@ -55,7 +56,7 @@
             <br>
             <div class="form-group">
               <label>Deadline</label>
-              <input class="au-input au-input--full" type="date" name="deadline" placeholder="Deadline" required>
+              <input class="au-input au-input--full" type="date" id= "datecontrol" name="deadline" min="2022/12/12" placeholder="Deadline" required>
             </div>
             <br>
             <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">submit</button>

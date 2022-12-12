@@ -56,6 +56,9 @@
           <a href="job-details.html"><img src="assets/images/product-1-370x270.jpg" alt=""></a>
           <div class="down-content">
             <a href="job-details.html">
+            <h3>
+              <pre>{{ $job->users->name }}</pre>
+            </h3>
               <h4>Title:
                 <pre>{{$job-> job_title}}</pre>
               </h4>
@@ -108,18 +111,14 @@
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="{{url('images/heading-3-1920x500.jpg')}}" alt="">
+              <img src="#" alt="">
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
               <h4>About Us</h4>
               <p>Job Portal is one of the first and leading career management site in the country. Eight young business and IT professional backed by strong command over e-business and in-depth understanding of the needs of job seekers and employers in the country's context started this venture on July 2000.<br><br>Our web-site aims to explore maximum benefits of the Internet. We believe our service will help the job seekers manage their career more efficiently. This site will also help employers solve many of the problems associated with traditional recruiting methods and allow them to save time and money.<br><br>Right after its launching, the site has been able to attract the Internet users in the country. The site regularly updates Job Information (on average more than 2500 valid job news are placed at any point of time at the site), provides facility to the job seekers for posting resume and online application. The site has also been able to get good response from a large number of organizations in the country who use online job advertisement facility, online CV bank access and online application receiving and processing facility of www.bdjobs.com. Till now, more than 25,000 employers in the country have recruited more than 3,50,000 professionals at different levels for their organizations through Bdjobs.com service.</p>
-              <ul class="social-icons">
-                <li><a href="https://www.facebook.com/hadi24x7"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://www.twitter.com/hadi24x7"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/hadi-uzzaman-347b32147/"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
+              
             </div>
           </div>
         </div>
@@ -214,7 +213,7 @@
           <div class="row">
             <div class="col-md-8">
               <h4>Contact us</h4>
-              <p>You can give us a message </p>
+              <p>You can contact with us </p>
             </div>
             <div class="col-lg-4 col-md-6 text-right">
               <a href="{{route('contactus.index')}}" class="filled-button">Contact Us</a>

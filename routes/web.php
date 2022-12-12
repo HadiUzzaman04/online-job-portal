@@ -21,6 +21,9 @@ use App\Http\Controllers\JobController as AdminJobController;
 use App\Http\Controllers\ManageApplicantController;
 use App\Http\Controllers\website\ProfileController;
 use App\Models\AddJob;
+use App\Models\Application;
+use App\Models\User;
+
 // use Illuminate\Console\Application;
 
 //Website
@@ -91,7 +94,10 @@ Route::post('/admin/dologin', [AdminLoginController::class, 'dologin'])->name('a
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin', function () {
-        return view('admin.content');
+        $applicant=User::where('role','applicant')->count();
+        $company=User::where('role','company')->count();
+        $job=AddJob::all()->count();
+        return view('admin.content',compact('applicant','company','job'));
     })->name('admin.dashboard');
     Route::get('/admin/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
@@ -110,6 +116,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     //Applicant
     Route::get('/admin/applicant/table', [ManageApplicantController::class, 'viewApplicant'])->name('viewApplicant');
+    Route::get('/admin/delete/applicant/{id}', [ManageApplicantController::class, 'delete'])->name('admin.delete.applicant');
 
     //Category
 
@@ -132,7 +139,10 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
     Route::get('/admin/applications', [ApplicationController::class, 'application'])->name('application');
     Route::get('/admin/viewCv/{id}', [ApplicationController::class, 'viewCv'])->name('viewCv');
-    Route::get('/admin/delete/applicant/{id}', [ManageApplicantController::class, 'delete'])->name('admin.delete.applicant');
+    Route::get('admin/acceptreject/{id}', [ApplicationController::class,'acceptreject'])->name('acceptreject');
+    Route::post('admin/acceptreject/status/{id}', [ApplicationController::class,'update'])->name('company.accept.application');
+    Route::get('/admin/acceptedlist',[ApplicationController::class,'acceptedlist'])->name('acceptedlist');
+
 
     //Event
 

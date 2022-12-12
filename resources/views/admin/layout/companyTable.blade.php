@@ -33,7 +33,7 @@
             <td>{{$company->phone}}</td>
 
             <td>
-                <a href="{{ route('admin.delete.company',$company->id) }}"> Delete</a>
+                <a href="{{ route('admin.delete.company',$company->id) }}" class=" btn-danger"> Delete</a>
             </td>
 
 

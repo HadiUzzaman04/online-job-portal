@@ -21,8 +21,12 @@ class CreateAddJobsTable extends Migration
             $table->string('years_of_experience');
             $table->string('type');
             $table->string('deadline');
-            $table->string('description');            
-
+            $table->string('description');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

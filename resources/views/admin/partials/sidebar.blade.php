@@ -1,15 +1,13 @@
  <!--footer  -->
  <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Admin" />
-                </a>
-            </div>
+            <br>
+            <br>
+
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="/admin">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard  </a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                                             </ul>

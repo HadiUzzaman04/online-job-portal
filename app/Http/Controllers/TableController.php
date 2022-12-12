@@ -21,24 +21,26 @@ class TableController extends Controller
 
 
 
-   
-    public function catagories (){
-        return view ('admin.layout.catagories');
+
+    public function catagories()
+    {
+        return view('admin.layout.catagories');
     }
 
 
-    public function jobs (Request $request){
+    public function jobs(Request $request)
+    {
         $search = $request['search'] ?? "";
-        if($search!=""){
-            $jobs=AddJob::where('job_title', 'LIKE', "%$search%")->get();
+        if ($search != "") {
+            $jobs = AddJob::where('job_title', 'LIKE', "%$search%")->get();
+        } else {
+            $jobs = AddJob::where('user_id', auth()->user()->id)->get();
         }
-        else{
-            $jobs=AddJob::all();
-        }
-        return view ('admin.layout.jobs',compact('jobs'));
+        return view('admin.layout.jobs', compact('jobs'));
     }
-    
-    public function testimonials (){
-        return view ('admin.layout.testimonials');
+
+    public function testimonials()
+    {
+        return view('admin.layout.testimonials');
     }
 }

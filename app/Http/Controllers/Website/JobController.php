@@ -10,11 +10,18 @@ use Illuminate\Http\Request;
 class JobController extends Controller
 {
     // public $id;
-    public function job()
+    public function job(Request $request)
     {
-        $today = date('Y-m-d');
+            $search = $request['search'] ?? "";
+            if($search!=""){
+                $jobs=AddJob::where('job_title', 'LIKE', "%$search%")->get();
+            }
+            else{
+                $today = date('Y-m-d');
 
-        $jobs = AddJob::where('deadline', '>=', $today)->get();
+                $jobs = AddJob::where('deadline', '>=', $today)->get();
+            }
+
 
         return view('website.layouts.jobs', compact('jobs'));
     }
@@ -22,14 +29,18 @@ class JobController extends Controller
     {
         // dd($id);
         $job = AddJob::find($id);
+        // $company_id = $job->users->id;
         return view('website.layouts.view.view_details', compact('job'));
     }
     public function application($jobId)
     {
-        return view('website.layouts.view.application', compact('jobId'));
+        $job = AddJob::find($jobId);
+        $company_id = $job->users->id;
+        return view('website.layouts.view.application', compact('job', 'company_id'));
     }
     public function storeApplication(Request $request)
     {
+        // dd($request->all());
         $request->validate([
 
             'file' => 'required|mimes:pdf,xlx,csv|max:2048',
@@ -49,7 +60,9 @@ class JobController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
-            'cv' => $fileName
+            'cv' => $fileName,
+            'company_id' => $request->input('company_id'),
+            'status' => 'pending'
         ]);
         return redirect()->back();
     }

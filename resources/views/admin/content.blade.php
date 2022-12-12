@@ -8,9 +8,6 @@
   
         <!-- END MENU SIDEBAR-->
 
-       
-        
-
             <!-- MAIN CONTENT-->
             <div class="main-content">
                 <div class="section__content section__content--p30">
@@ -32,12 +29,12 @@
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>10</h2>
+                                                <h2>{{ $applicant }}</h2>
                                                 <span>Applicant</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
+                                            <canvas id="widgetChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -50,12 +47,12 @@
                                                 <i class="zmdi zmdi-account-o"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>10</h2>
+                                                <h2>{{ $company }}</h2>
                                                 <span>Company</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
+                                            <canvas id="widgetChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -68,12 +65,12 @@
                                                 <i class="zmdi zmdi-calendar-note"></i>
                                             </div>
                                             <div class="text">
-                                                <h2>6</h2>
+                                                <h2>{{ $job }}</h2>
                                                 <span>Total jobs</span>
                                             </div>
                                         </div>
                                         <div class="overview-chart">
-                                            <canvas id="widgetChart3"></canvas>
+                                            <canvas id="widgetChart"></canvas>
                                         </div>
                                     </div>
                                 </div>

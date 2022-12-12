@@ -42,7 +42,7 @@ class EventController extends Controller
             'event_description'=>$request->input('event_description')
 
         ]);
-        return redirect('/event');
+        return redirect('/admin/event');
     }
 
     /**

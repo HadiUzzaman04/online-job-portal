@@ -31,7 +31,7 @@
             <td>{{$applicant->phone}}</td>
 
             <td>
-                <a href="{{ route('admin.delete.applicant',$applicant->id) }}">Delete</a>
+                <a href="{{ route('admin.delete.applicant',$applicant->id) }}" class=" btn-danger">Delete</a>
             </td>
 
         </tr>
